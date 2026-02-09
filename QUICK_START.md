@@ -24,7 +24,7 @@ devtools::install_local("/path/to/drivingtime.zip")
 library(drivingtime)
 
 # Set API key
-set_api_key("AIzaSyCMqDOGNv0l2L6dBoODjz9ZHYMGY8Z5ivY")
+set_api_key("YOUR_GOOGLE_MAPS_API_KEY")
 
 # Load data (IMPORTANT: Don't open in Excel first!)
 data <- read_coordinates("/Users/marcotte/Dropbox/Worcester HS distances.csv")
