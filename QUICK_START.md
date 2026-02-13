@@ -27,7 +27,7 @@ library(drivingtime)
 set_api_key("YOUR_GOOGLE_MAPS_API_KEY")
 
 # Load data (IMPORTANT: Don't open in Excel first!)
-data <- read_coordinates("/Users/marcotte/Dropbox/Worcester HS distances.csv")
+data <- read_coordinates("/yourdata.csv")
 
 # Calculate driving times
 results <- calculate_driving_time(
@@ -35,11 +35,12 @@ results <- calculate_driving_time(
   origin_lat = "lat_HS",
   origin_lon = "lon_HS",
   dest_lat = "lat_coll",
-  dest_lon = "lon_coll"
+  dest_lon = "lon_coll",
+  api_key <- Sys.getenv("GOOGLE_MAPS_API_KEY")
 )
 
 # Save results
-save_results(results, "/Users/marcotte/Dropbox/results.csv")
+save_results(results, "/results.csv")
 ```
 
 ---
@@ -84,7 +85,8 @@ results <- calculate_driving_time(
   origin_lat = "your_origin_lat_column",
   origin_lon = "your_origin_lon_column",
   dest_lat = "your_dest_lat_column",
-  dest_lon = "your_dest_lon_column"
+  dest_lon = "your_dest_lon_column",
+  api_key <- Sys.getenv("GOOGLE_MAPS_API_KEY")
 )
 
 # Save results
