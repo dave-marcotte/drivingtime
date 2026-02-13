@@ -57,7 +57,8 @@ results <- calculate_driving_time(
   origin_lat = "lat_HS",      # Your column name for origin latitude
   origin_lon = "lon_HS",      # Your column name for origin longitude
   dest_lat = "lat_coll",      # Your column name for destination latitude
-  dest_lon = "lon_coll"       # Your column name for destination longitude
+  dest_lon = "lon_coll",       # Your column name for destination longitude
+  api_key <- Sys.getenv("GOOGLE_MAPS_API_KEY")
 )
 
 # ----------------------------------------------------------------------------
