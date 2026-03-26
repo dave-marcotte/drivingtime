@@ -19,7 +19,7 @@ set_api_key <- function(api_key) {
   Sys.setenv(GOOGLE_MAPS_API_KEY = api_key)
   cat("API key set successfully for this session.\n")
   cat("To make it permanent, add this to your .Renviron file:\n")
-  cat("GOOGLE_MAPS_API_KEY=", api_key, "\n", sep = "")
+  cat("GOOGLE_MAPS_API_KEY=<your_key>\n")
 }
 
 #' Read coordinates from CSV file
